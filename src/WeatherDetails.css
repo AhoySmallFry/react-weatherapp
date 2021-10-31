@@ -1,0 +1,13 @@
+.WeatherDetails .forecast-image {
+  width: 60px;
+  margin-bottom: 5px;
+}
+
+.WeatherDetails .detail-name {
+  margin-bottom: 5px;
+}
+
+.border {
+  border-color: black;
+  border: 5px;
+}

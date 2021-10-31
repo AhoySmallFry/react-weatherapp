@@ -1,0 +1,22 @@
+.FiveDayForecast .weather-forecast {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 40px;
+}
+
+.FiveDayForecast .forecast-day {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.FiveDayForecast .weather-forecast-temperature {
+  font-size: 22px;
+  text-align: center;
+}
+
+.FiveDayForecast .forecast-image {
+  display: block;
+  margin: 0 auto;
+}
