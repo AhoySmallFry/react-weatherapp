@@ -6,13 +6,7 @@ export default function UnitSelector() {
     <div className="UnitSelector">
       <div className="row d-flex flex-row-reverse bd-highlight">
         <div class="units">
-          <a href="#" id="celsius">
-            °C
-          </a>
-          |
-          <a href="#" id="farenheit">
-            °F
-          </a>
+          <button id="celsius">°C</button>|<button id="farenheit">°F</button>
         </div>
       </div>
     </div>
