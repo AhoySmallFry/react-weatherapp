@@ -13,7 +13,7 @@ export default function App() {
     <div className="App">
       <Search />
       <UnitSelector />
-      <CurrentCityWeather />
+      <CurrentCityWeather defaultCity="Lincoln" />
       <hr />
       <WeatherDetails />
       <hr />
