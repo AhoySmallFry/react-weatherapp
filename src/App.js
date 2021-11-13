@@ -15,7 +15,7 @@ export default function App() {
       <UnitSelector />
       <CurrentCityWeather defaultCity="Lincoln" />
       <hr />
-      <WeatherDetails />
+      <WeatherDetails defaultCity="Lincoln" />
       <hr />
       <FiveDayForecast />
       <hr />
