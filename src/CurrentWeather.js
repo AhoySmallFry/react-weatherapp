@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormattedTime from "./FormattedTime";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./CurrentWeather.css";
 
@@ -17,7 +18,6 @@ export default function CurrentCityWeather(props) {
   }
 
   let currentWeatherData = {
-    date: "17 October",
     imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
   };
 
@@ -33,7 +33,9 @@ export default function CurrentCityWeather(props) {
               </span>
             </h2>
             <h2>
-              <span className="current-date">{currentWeatherData.date}</span>
+              <span className="current-date">
+                <FormattedDate date={weatherData.time} />
+              </span>
             </h2>
             <p className="current-weather">
               <img
