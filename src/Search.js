@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import CurrentWeather from "./CurrentWeather";
 import WeatherDetails from "./WeatherDetails";
-import UnitSelector from "./UnitSelector";
 
 export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -76,7 +75,6 @@ export default function Search(props) {
             </button>
           </div>
         </form>
-
         <CurrentWeather data={weatherData} />
         <WeatherDetails data={weatherData} />
       </div>
