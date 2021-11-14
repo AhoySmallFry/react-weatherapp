@@ -19,9 +19,10 @@ export default function Search(props) {
       description: response.data.weather[0].description,
       city: response.data.name,
       time: new Date(response.data.dt * 1000),
-      maxTemp: response.data.main.temp.max,
-      minTemp: response.data.main.temp.min,
+      maxTemp: response.data.main.temp_max,
+      minTemp: response.data.main.temp_min,
       wind: response.data.wind.speed,
+      icon: response.data.weather[0].icon,
       rain: response.data.main.humidity,
       sunset: response.data.sys.sunset,
     });

@@ -3,8 +3,7 @@ import "./App.css";
 
 import Search from "./Search";
 import UnitSelector from "./UnitSelector";
-import CurrentCityWeather from "./CurrentWeather";
-import WeatherDetails from "./WeatherDetails";
+
 import FiveDayForecast from "./FiveDayForecast";
 import Footer from "./Footer";
 
@@ -13,9 +12,6 @@ export default function App() {
     <div className="App">
       <Search defaultCity="Lincoln" />
       <UnitSelector />
-      <CurrentCityWeather />
-      <hr />
-      <WeatherDetails />
       <hr />
       <FiveDayForecast />
       <hr />

@@ -13,7 +13,8 @@ export default function WeatherDetails(props) {
           <div className="detail-name">High/Low</div>
           <img src={HiLo} alt="" className="forecast-image" />
           <div className="detail-value">
-            <strong>{props.data.maxTemp}°</strong> / {props.data.minTemp}°
+            <strong>{Math.round(props.data.maxTemp)}°</strong> /{" "}
+            {Math.round(props.data.minTemp)}°
           </div>
         </div>
         <div className="col-3 border-right">
@@ -27,7 +28,7 @@ export default function WeatherDetails(props) {
           <div className="detail-name">Wind Speed</div>
           <img src={WindSpeed} alt="" className="forecast-image" />
           <div className="detail-value">
-            <strong>{props.data.wind} kph</strong>
+            <strong>{Math.round(props.data.wind)} kph</strong>
           </div>
         </div>
         <div className="col-3">
