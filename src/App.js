@@ -11,11 +11,11 @@ import Footer from "./Footer";
 export default function App() {
   return (
     <div className="App">
-      <Search />
+      <Search defaultCity="Lincoln" />
       <UnitSelector />
-      <CurrentCityWeather defaultCity="Lincoln" />
+      <CurrentCityWeather />
       <hr />
-      <WeatherDetails defaultCity="Lincoln" />
+      <WeatherDetails />
       <hr />
       <FiveDayForecast />
       <hr />
