@@ -4,6 +4,7 @@ import Precipitation from "./049-umbrella.svg";
 import Sunset from "./030-sunsets.svg";
 import WindSpeed from "./051-wind sign.svg";
 import "./WeatherDetails.css";
+import FormattedSunset from "./FormattedSunset";
 
 export default function WeatherDetails(props) {
   return (
@@ -35,7 +36,9 @@ export default function WeatherDetails(props) {
           <div className="detail-name">Sunset</div>
           <img src={Sunset} alt="" className="forecast-image" />
           <div className="detail-value">
-            <strong>{props.data.sunset}</strong>
+            <strong>
+              <FormattedSunset date={props.data.sunset} />
+            </strong>
           </div>
         </div>
       </div>

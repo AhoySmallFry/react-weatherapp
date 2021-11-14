@@ -25,7 +25,7 @@ export default function Search(props) {
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
       rain: response.data.main.humidity,
-      sunset: response.data.sys.sunset,
+      sunset: new Date(response.data.sys.sunset * 1000),
     });
   }
 
