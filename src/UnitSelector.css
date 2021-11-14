@@ -1,3 +1,9 @@
-.UnitSelector {
+.units {
   margin-right: 15px;
+  font-size: 16px;
+  font-weight: 200;
+  position: relative;
+  line-height: 1;
+  top: -15px;
+  left: 5px;
 }

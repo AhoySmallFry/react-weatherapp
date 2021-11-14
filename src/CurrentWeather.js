@@ -3,6 +3,7 @@ import FormattedTime from "./FormattedTime";
 import FormattedDate from "./FormattedDate";
 import "./CurrentWeather.css";
 import WeatherIcon from "./WeatherIcon";
+import UnitSelector from "./UnitSelector";
 
 export default function CurrentWeather(props) {
   return (
@@ -23,8 +24,7 @@ export default function CurrentWeather(props) {
           <p className="current-weather">
             <WeatherIcon code={props.data.icon} alt={props.data.description} />
             <p className="current-temp">
-              <span> {Math.round(props.data.temperature)}</span>°
-              <span className="current-temp-unit">C</span>
+              <UnitSelector temperature={props.data.temperature} />
             </p>
           </p>
           <p className="current-description">{props.data.description}</p>

@@ -76,7 +76,7 @@ export default function Search(props) {
             </button>
           </div>
         </form>
-        <UnitSelector />
+
         <CurrentWeather data={weatherData} />
         <WeatherDetails data={weatherData} />
       </div>
