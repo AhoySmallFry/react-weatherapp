@@ -4,10 +4,6 @@ import FormattedDate from "./FormattedDate";
 import "./CurrentWeather.css";
 
 export default function CurrentWeather(props) {
-  let currentWeatherData = {
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
-  };
-
   return (
     <div className="CurrentCityWeather">
       <div className="row">
@@ -24,7 +20,7 @@ export default function CurrentWeather(props) {
             </span>
           </h2>
           <p className="current-weather">
-            <img src={currentWeatherData.imgUrl} alt={props.data.description} />
+            <img src={props.data.iconUrl} alt={props.data.description} />
             <p className="current-temp">
               <span> {Math.round(props.data.temperature)}</span>°
               <span className="current-temp-unit">C</span>
