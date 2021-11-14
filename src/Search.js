@@ -24,7 +24,6 @@ export default function Search(props) {
       minTemp: response.data.main.temp_min,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       rain: response.data.main.humidity,
       sunset: new Date(response.data.sys.sunset * 1000),
     });
