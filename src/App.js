@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 
 import Search from "./Search";
-import FiveDayForecast from "./FiveDayForecast";
 import Footer from "./Footer";
 
 export default function App() {
