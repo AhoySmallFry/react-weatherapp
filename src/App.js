@@ -10,8 +10,6 @@ export default function App() {
     <div className="App">
       <Search defaultCity="Lincoln" />
       <hr />
-      <FiveDayForecast />
-      <hr />
       <Footer />
     </div>
   );

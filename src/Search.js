@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import CurrentWeather from "./CurrentWeather";
 import WeatherDetails from "./WeatherDetails";
+import FiveDayForecast from "./FiveDayForecast";
 
 export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -15,6 +16,7 @@ export default function Search(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       city: response.data.name,
@@ -77,6 +79,7 @@ export default function Search(props) {
         </form>
         <CurrentWeather data={weatherData} />
         <WeatherDetails data={weatherData} />
+        <FiveDayForecast coord={weatherData.coordinates} />
       </div>
     );
   } else {
