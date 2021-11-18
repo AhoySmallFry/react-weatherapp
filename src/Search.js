@@ -82,8 +82,8 @@ export default function Search(props) {
           </div>
           <div className="input-group-append">
             <button
-              className="btn btn-outline-primary current-location-button button-icon geolocation"
-              type="button"
+              className="btn btn-primary current-location-button button-icon"
+              type="submit"
             >
               <FontAwesomeIcon icon={faMapMarkerAlt} onClick={geolocation} />
             </button>

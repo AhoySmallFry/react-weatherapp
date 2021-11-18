@@ -3,7 +3,7 @@
 }
 
 .Search .change-city-button,
-.current-location-button {
+.Search .current-location-button {
   font-size: 30px;
   width: 56px;
   border: solid 1px rgb(206, 212, 218);
@@ -12,7 +12,7 @@
 }
 
 .Search .change-city-button:hover,
-.current-location-button:hover {
+.Search .current-location-button:hover {
   background-color: white;
   color: #0275d8;
 }
