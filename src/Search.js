@@ -45,6 +45,18 @@ export default function Search(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function geolocation(position) {
+    navigator.geolocation.getCurrentPosition(accessPosition);
+  }
+
+  function accessPosition(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = "7cd341f73bed1fbf392c5c5cd61542e9";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Search">
@@ -70,10 +82,10 @@ export default function Search(props) {
           </div>
           <div className="input-group-append">
             <button
-              className="btn btn-outline-primary current-location-button button-icon"
+              className="btn btn-outline-primary current-location-button button-icon geolocation"
               type="button"
             >
-              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              <FontAwesomeIcon icon={faMapMarkerAlt} onClick={geolocation} />
             </button>
           </div>
         </form>
