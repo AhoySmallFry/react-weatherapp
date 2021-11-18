@@ -16,44 +16,15 @@ export default function FiveDayForecast(props) {
     return (
       <div className="FiveDayForecast">
         <div className="row">
-          <div className="col-2">
-            <DayForecast data={forecast[0]} />
-          </div>
-          <div className="col-2">
-            <div className="forecast-day">Tues</div>
-            <WeatherIcon code="01d" />
-            <div className="weather-forecast-temperature">
-              <strong>25°</strong> 18°
-            </div>
-          </div>
-          <div className="col-2">
-            <div className="forecast-day">Weds</div>
-            <WeatherIcon code="01d" />
-            <div className="weather-forecast-temperature">
-              <strong>25°</strong> 18°
-            </div>
-          </div>
-          <div className="col-2">
-            <div className="forecast-day">Thurs</div>
-            <WeatherIcon code="01d" />
-            <div className="weather-forecast-temperature">
-              <strong>25°</strong> 18°
-            </div>
-          </div>
-          <div className="col-2">
-            <div className="forecast-day">Fri</div>
-            <WeatherIcon code="01d" />
-            <div className="weather-forecast-temperature">
-              <strong>25°</strong> 18°
-            </div>
-          </div>
-          <div className="col-2">
-            <div className="forecast-day">Sat</div>
-            <WeatherIcon code="01d" />
-            <div className="weather-forecast-temperature">
-              <strong>25°</strong> 18°
-            </div>
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            if (index < 6) {
+              return (
+                <div className="col-2" key={index}>
+                  <DayForecast data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
